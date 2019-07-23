@@ -11,7 +11,7 @@ import 'rxjs/add/observable/empty';
 @Injectable()
 export class DataService {
 
-    private baseUrl = 'http://localhost:8080/api/'
+    private baseUrl = 'https://allyiance-invoicify.herokuapp.com/api/'
 
     found = false;
 
@@ -72,7 +72,7 @@ export class DataService {
                 }
             } catch (error) {
                 errMsg = error._body;
-            } 
+            }
         }else{
             if (error instanceof Response) {
                 if(error.status === 0){
